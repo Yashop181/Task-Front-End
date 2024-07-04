@@ -16,20 +16,20 @@ After logging in, users will access:
 
 ## Folder Structure
 
-`my-app/
-├── public/
-├── src/
-│ |
-│ │── AddProduct.js
-│ │── Home.js
-│ │── Layout.js
-│ │── ProductList.js
-│ │── SearchBar.js
-│ │── Login.js
-│ ├── App.js
-│ └── index.js
-├── package.json
-└── ...`
+    my-app/
+        ├── public/
+        ├── src/
+        │ |
+        │ │── AddProduct.js
+        │ │── Home.js
+        │ │── Layout.js
+        │ │── ProductList.js
+        │ │── SearchBar.js
+        │ │── Login.js
+        │ ├── App.js
+        │ └── index.js
+        ├── package.json
+        └── ...
 
 
 
