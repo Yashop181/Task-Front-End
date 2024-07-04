@@ -16,7 +16,7 @@ After logging in, users will access:
 
 ## Folder Structure
 
-my-app/
+`my-app/
 ├── public/
 ├── src/
 │ |
@@ -29,7 +29,7 @@ my-app/
 │ ├── App.js
 │ └── index.js
 ├── package.json
-└── ...
+└── ...`
 
 
 
