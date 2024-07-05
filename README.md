@@ -5,8 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Task Overview
 
 Users need to log in with:
-- **Email:** yash@gmail.com
-- **Password:** yash
+- **Email:** eve.holt@reqres.in
+- **Password:** pistol
 
 After logging in, users will access:
 - `HomePage`: Main landing page.
