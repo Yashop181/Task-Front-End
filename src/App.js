@@ -10,20 +10,19 @@ const App = () => {
   const [isLoggedIn , setIsLoggedIn] = useState(false);
   useEffect(()=>{
     //this i=will check if user is already logged in  
-    const loggedIn = localStorage.getItem('isLoggedIn');
-    if(loggedIn){
+    const token = localStorage.getItem('isLoggedIn');
+    if(token){
       setIsLoggedIn(true)
     }
   },[]);
 
   const handleLogin = ()=>
   {
-    // Save the login status in localStorage and update the state
-    localStorage.setItem('isLoggedIn', 'true');
-    setIsLoggedIn(true);
+    setIsLoggedIn(true);// Update isLoggedIn state to true on successful login
   }
   const handleLogout = ()=>{
     // Remove the login status from localStorage and update the state
+    localStorage.removeItem('authToken');
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
     alert("successfully logout!!")
