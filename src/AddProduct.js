@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-
 const AddProduct = () => {
   const [productName, setProductName] = useState('');
   const [price, setPrice] = useState('');
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(() => {
+    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+    return storedProducts;
+  });
 
   const handleProductName = (e) => {
     setProductName(e.target.value);
@@ -24,10 +26,11 @@ const AddProduct = () => {
       name: productName,
       price: parseFloat(price)
     };
-    setProducts([...products, newProduct]);
+    const updatedProducts = [...products, newProduct];
+    setProducts(updatedProducts);
     setProductName('');
     setPrice('');
-    localStorage.setItem('products', JSON.stringify([...products, newProduct]));
+    localStorage.setItem('products', JSON.stringify(updatedProducts));
   };
 
   return (

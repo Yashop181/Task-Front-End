@@ -6,7 +6,9 @@ import AddProduct from "./AddProduct"
 import Search from "./Search"
 import ProductList from "./ProductList"
 import Login from "./Login"
+import { useNavigate } from "react-router-dom"
 const App = () => {
+  const nav = useNavigate()
   const [isLoggedIn , setIsLoggedIn] = useState(false);
   useEffect(()=>{
     //this i=will check if user is already logged in  
@@ -26,6 +28,8 @@ const App = () => {
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
     alert("successfully logout!!")
+    nav('/login')
+    
   }
 
   return (

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 const ProductList = () => {
   const [products, setProducts] = useState([]); // to hold products array
   const [searchTerm, setSearchTerm] = useState(''); // for search term
